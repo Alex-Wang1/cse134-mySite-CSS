@@ -1,10 +1,16 @@
+:root {
+    --color-default: black;
+    --color-main: #F5EEDC;
+}
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Montserrat',sans-serif;
 }
 
 body {
-    background: black;
+    background: var(--color-default);
+    color: var(--color-main);
 }
 
 a {
@@ -23,46 +29,41 @@ a:hover {
 }
 
 /* navigation bar */
-/* bar */
 nav#navbar {
-    /* use grid to layout */
+    /* use flexbox to layout */
     display: flex;
-    margin: 2rem;
-
-    color: #F5EEDC;
-    font-family: 'Montserrat', sans-serif;
     justify-content: space-between;
     text-align: center;
+    margin: 2rem;
 }
 
 /* home and projects button */
 #content {
     display: flex;
+    justify-content: space-between;
     list-style: none;
     font-size: 2rem;
-}
-
-#home {
-    margin-left: 5rem;
+    width: 20%;
 }
 
 #project {
-    margin-left: 5rem;
+    margin-left: 6.5vw;
 }
 
 /* social icons */
-nav > div > ul#iconBar {
+#iconBar {
     display: flex;
-    list-style: none;
     justify-content: space-evenly;
+    list-style: none;
     width: 38%;
     margin-left: 7rem;
 }
-nav > div#socialIconAndContact {
+#socialIconAndContact {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     width: 50%;
+    min-width: 500px;
 }
 
 /* header contact button */
@@ -70,11 +71,18 @@ nav > div#socialIconAndContact {
     font-size: 2rem;
 }
 
+@media screen and (max-width: 390px) {
+    #home {
+        margin-left: 0;
+    }
+    #iconBar {
+        margin-left: 0;
+    }
+}
+
 /* body content */
 /* profiles */
 #profiles {
-    color: #F5EEDC;
-    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -87,7 +95,7 @@ nav > div#socialIconAndContact {
     height: 12.5rem;
 }
 
-section#profiles > h1 {
+h1 {
     font-size: 5.625rem;
     font-family: cursive;
 }
@@ -114,9 +122,7 @@ hr {
 }
 
 /* projects */
-main > section#projects {
-    color: #F5EEDC;
-    font-family: 'Montserrat', sans-serif;
+#projects {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,13 +130,13 @@ main > section#projects {
     text-align: center;
 }
 
-main > section#projects ul {
+#projects ul {
     list-style: none;
 }
 
-main > section > ul#course-project {
-    width: 58rem;
-    height: 35.5rem;
+#course-project {
+    width: 65vw;
+    height: 35.5vw;
     background: linear-gradient(180deg, #000000 0.01%, rgba(47, 46, 46, 0) 36.46%, rgba(47, 46, 46, 0.0208333) 68.75%, #262525 100%);
     border-radius: 3.75rem;
     border: 1px solid #171515;
@@ -139,15 +145,15 @@ main > section > ul#course-project {
     padding-left: 0;
 }
 
-main > section#projects li {
+#projects li {
     font-size: 1.25rem;
     height: 25.5rem;
     margin-top: 2.625rem;
 }
 
-main > section > ul#side-project {
-    width: 58rem;
-    height: 35.5rem;
+#side-project {
+    width: 65vw;
+    height: 35.5vw;
     background: linear-gradient(180deg, #262525 0%, rgba(47, 46, 46, 0) 36.46%, rgba(47, 46, 46, 0.0208333) 68.75%, #000000 100%);
     border: 1px solid #171515;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -157,16 +163,14 @@ main > section > ul#side-project {
 }
 
 /* end philosophy and contact */
-main > section#cta {
-    color: #F5EEDC;
-    font-family: 'Montserrat', sans-serif;
+#cta {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
 
-main > section#cta > a#footer-contact {
+#footer-contact {
     width: 10.4375rem;
     height: 3.625rem;
     background: linear-gradient(180deg, rgba(22, 22, 22, 0) 0%, #494848 100%);
@@ -175,23 +179,21 @@ main > section#cta > a#footer-contact {
     margin-top: 10rem;
 }
 
-main > section#cta > a#footer-contact span {
+#footer-contact span {
     font-size: 1.25rem;
     position: relative;
     top: 1rem;
 }
 
 /* footer */
-footer#foot {
-    color: #F5EEDC;
-    font-family: 'Montserrat', sans-serif;
+#foot {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 15rem;
 }
 
-footer#foot > ul#foot-socialIcons {
+#foot-socialIcons {
     display: flex;
     list-style: none;
     padding-left: 0;
@@ -202,3 +204,5 @@ footer#foot > ul#foot-socialIcons {
 #legal {
     font-size: 0.8rem;
 }
+
+
